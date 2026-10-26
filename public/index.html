@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Activity Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Fitness Activity</h1>
+        <p>Your daily movement, your progress.</p>
+    </header>
+
+    <main>
+        <section class="welcome">
+            <div>
+                <p class="tag">YOUR FITNESS DASHBOARD</p>
+                <h2>Stay active. Get stronger.</h2>
+                <p>Record your workouts and keep moving towards your goals.</p>
+            </div>
+            <div class="welcome-icon">🏃</div>
+        </section>
+
+        <section class="dashboard">
+            <div class="card">
+                <span class="icon">✓</span>
+                <h3>Total Activities</h3>
+                <p id="totalActivities">0</p>
+            </div>
+
+            <div class="card">
+                <span class="icon">◷</span>
+                <h3>Workout Minutes</h3>
+                <p id="totalMinutes">0</p>
+            </div>
+
+            <div class="card">
+                <span class="icon">⚡</span>
+                <h3>Calories Burned</h3>
+                <p id="totalCalories">0</p>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add an Activity</h2>
+            <p class="subtitle">What did you do today?</p>
+
+            <form id="activityForm">
+                <div class="field">
+                    <label for="activity">Activity Name</label>
+                    <input type="text" id="activity"
+                           placeholder="e.g. Morning Walk" required>
+                </div>
+
+                <div class="field">
+                    <label for="type">Activity Type</label>
+                    <select id="type">
+                        <option value="Walking">Walking</option>
+                        <option value="Running">Running</option>
+                        <option value="Cycling">Cycling</option>
+                        <option value="Gym">Gym</option>
+                        <option value="Yoga">Yoga</option>
+                    </select>
+                </div>
+
+                <div class="field">
+                    <label for="duration">Duration (minutes)</label>
+                    <input type="number" id="duration"
+                           placeholder="30" min="1" step="1" required>
+                </div>
+
+                <div class="field">
+                    <label for="calories">Calories Burned</label>
+                    <input type="number" id="calories"
+                           placeholder="150" min="0" step="1" required>
+                </div>
+
+                <button type="submit">+ Add Activity</button>
+            </form>
+        </section>
+
+        <section class="panel">
+            <div class="history-heading">
+                <div>
+                    <h2>Activity History</h2>
+                    <p class="subtitle">Your recorded workouts</p>
+                </div>
+                <span class="history-icon">▤</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Activity</th>
+                            <th>Type</th>
+                            <th>Minutes</th>
+                            <th>Calories</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="activityList"></tbody>
+                </table>
+            </div>
+
+            <p id="emptyMessage">No activities yet. Add your first workout!</p>
+        </section>
+    </main>
+
+    <footer>Fitness Activity Tracker | EWP Lab External</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

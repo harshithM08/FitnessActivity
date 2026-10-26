@@ -1,0 +1,293 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f1f3f2;
+    color: #252d28;
+}
+
+header {
+    background: white;
+    padding: 24px 6%;
+    border-bottom: 1px solid #e5e9e6;
+}
+
+header h1 {
+    margin: 0;
+    color: #247a4b;
+    font-size: 28px;
+}
+
+header p {
+    margin: 6px 0 0;
+    color: #7b847e;
+    font-size: 14px;
+}
+
+main {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 0 22px;
+}
+
+.welcome {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 25px 30px;
+    margin-bottom: 22px;
+    background: #e4f2e8;
+    border-radius: 14px;
+}
+
+.tag {
+    color: #247a4b;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.3px;
+}
+
+.welcome h2 {
+    margin: 8px 0;
+    font-size: 25px;
+}
+
+.welcome p {
+    color: #69766d;
+}
+
+.welcome-icon {
+    font-size: 42px;
+    background: white;
+    border-radius: 14px;
+    padding: 12px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 22px;
+}
+
+.card {
+    background: white;
+    padding: 22px;
+    border-radius: 13px;
+    border: 1px solid #e8ece9;
+}
+
+.icon {
+    display: inline-grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+    background: #e4f2e8;
+    color: #247a4b;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.card h3 {
+    margin: 13px 0 4px;
+    color: #737d76;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.card p {
+    margin: 0;
+    color: #247a4b;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.panel {
+    background: white;
+    padding: 25px;
+    margin-bottom: 22px;
+    border: 1px solid #e5eae6;
+    border-radius: 13px;
+}
+
+.panel h2 {
+    margin: 0;
+    font-size: 21px;
+}
+
+.subtitle {
+    margin: 5px 0 20px;
+    color: #858d87;
+    font-size: 13px;
+}
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+label {
+    font-size: 13px;
+    font-weight: bold;
+    color: #536057;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #dce3de;
+    border-radius: 7px;
+    background: #fbfcfb;
+    font-size: 14px;
+    color: #252d28;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #c0e2cb;
+    border-color: #459464;
+}
+
+button {
+    grid-column: 1 / -1;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    background: #287d4d;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #1c633a;
+}
+
+.history-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history-icon {
+    padding: 10px;
+    border-radius: 10px;
+    background: #e4f2e8;
+    color: #247a4b;
+    font-size: 22px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 14px 10px;
+    text-align: left;
+    border-bottom: 1px solid #e9eeea;
+    white-space: nowrap;
+}
+
+th {
+    background: #f5f8f5;
+    color: #657269;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+td {
+    font-size: 14px;
+}
+
+.delete-btn {
+    width: auto;
+    padding: 7px 12px;
+    margin: 0;
+    background: #fff0ef;
+    color: #bd4444;
+    font-size: 12px;
+}
+
+.delete-btn:hover {
+    background: #ffe0dd;
+}
+
+#emptyMessage {
+    padding: 15px 0;
+    margin: 0;
+    color: #858d87;
+    text-align: center;
+    font-size: 13px;
+}
+
+footer {
+    padding: 20px;
+    text-align: center;
+    color: #7b847e;
+    font-size: 13px;
+    background: white;
+    border-top: 1px solid #e5e9e6;
+}
+
+@media (max-width: 650px) {
+    main {
+        margin: 20px auto;
+        padding: 0 14px;
+    }
+
+    .welcome {
+        padding: 20px;
+    }
+
+    .welcome h2 {
+        font-size: 21px;
+    }
+
+    .welcome-icon {
+        font-size: 30px;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .panel {
+        padding: 18px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: auto;
+    }
+
+    th,
+    td {
+        padding: 11px 8px;
+        font-size: 12px;
+    }
+}
